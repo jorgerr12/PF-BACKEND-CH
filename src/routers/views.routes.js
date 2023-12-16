@@ -13,7 +13,7 @@ const cartService = new CartManager() */
 router.get("/realtimeproducts",auth,ViewsController.showRealtimeproducts);
 router.get("/",auth, ViewsController.home);
 router.get("/products",auth, ViewsController.showProducts);
-router.get("/products/:cid",auth, ViewsController.showProductDetails);
+router.get("/products/:cid", ViewsController.showProductDetails);
 router.get("/cart/:cid",auth, ViewsController.showCart)
 router.get('/users', isAdmin, ViewsController.showUsers)
 // rutas publicas
