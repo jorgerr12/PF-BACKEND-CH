@@ -6,7 +6,7 @@ registerForm?.addEventListener("submit", async (event) => {
   const data = new FormData(registerForm);
   const registerPayload = Object.fromEntries(data);
 
-  await fetch("http://localhost:8080/api/session/register", {
+  await fetch("/api/session/register", {
     method: "POST",
     body: JSON.stringify(registerPayload),
     headers: {
@@ -28,7 +28,7 @@ loginForm?.addEventListener("submit", async (event) => {
   const data = new FormData(loginForm);
   const loginPayload = Object.fromEntries(data);
 
-  await fetch("http://localhost:8080/api/session/login", {
+  await fetch("/api/session/login", {
     method: "POST",
     body: JSON.stringify(loginPayload),
     headers: {
