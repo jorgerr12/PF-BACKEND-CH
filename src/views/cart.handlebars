@@ -1,0 +1,74 @@
+<div class="card" style="margin-top: 5rem;">
+  <div class="card-header" style="text-align: center;">
+    <h1>MY CART</h1>
+  </div>
+  <div class="card-body">
+    {{#if products.length}}
+    <div class="row">
+      <div class="col-md-8">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each products}}
+            <tr>
+              <td><img src="/img/product.png" alt="" style="width: 3rem;"></td>
+              <td>{{this.product.title}}</td>
+              <td>S/{{this.product.price}}</td>
+              <td>{{this.quantity}}</td>
+              <td>S/{{this.total}}</td>
+              <td><a class="deletedProductToCart" data-cartId="{{cid}}" data-pId="{{this._id}}" href="#"
+                  style="color: red;"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Total del Carrito</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sub Total</td>
+                <td style="text-align: right;"><span>S/{{this.total}}</span></td>
+              </tr>
+              <tr style="font-weight: bold;font-size: larger;">
+                <td>Total</td>
+                <td style="text-align: right;"><span>S/{{this.total}}</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="text-align: right;">
+            <button data-cartId="{{this.cid}}" id="btnPurchase" class="btn btn-primary">Finalizar Compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <div class="col-md-12" style="text-align: center;">
+      <h3> CART EMPTY !</h1>
+    </div>
+    {{/if}}
+
+
+  </div>
+
+
+</div>
+<script src="/js/cart.js"></script>

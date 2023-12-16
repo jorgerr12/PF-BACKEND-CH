@@ -1,0 +1,36 @@
+<p style="color: brown;">{{error}}</p>
+{{#if payload}}
+<h1>LISTA DE PRODUCTOS  {{user.email}}</h1>
+<div class="row">
+    {{#each payload}}
+    <div class="col col-lg-3 p-4">
+        <div class="card">
+            <img src="/img/product.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">{{this.description}}</p>
+                <p> Precio: ${{this.price}}</p>
+                <div>
+                    <p>{{this.stock}} units left</p>
+                </div>
+                <div class="text-center">
+                <a href="/products/{{this._id}}" class="btn btn-success">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<div  class="m-3 text-center fs-5">
+    {{#if prevLink}}
+    <a href={{prevLink}}>Anterior</a>
+    {{/if}}
+    {{page}}
+    {{#if nextLink}}
+    <a href={{nextLink}}>Siguiente</a>
+    {{/if}}
+</div>
+{{else}}
+<h2>No hay productos</h2>
+{{/if}}
+

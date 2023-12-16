@@ -1,0 +1,39 @@
+[
+	{
+		"id": 2,
+		"title": "zapatillas nike",
+		"description": "zapatillas nike color azul",
+		"price": 500,
+		"thumbnail": "img",
+		"code": "112",
+		"stock": 10
+	},
+	{
+		"id": 3,
+		"title": "camiseta nike",
+		"description": "camiseta nike color blanca",
+		"price": 50,
+		"thumbnail": "img",
+		"code": "113",
+		"stock": 10
+	},
+	{
+		"id": 4,
+		"title": "abc",
+		"description": "abc",
+		"price": 200,
+		"code": "123",
+		"status": 1,
+		"category": "computo",
+		"thumbnails": "img"
+	},
+	{
+		"title": "producto prueba"
+	},
+	{
+		"title": "prueba 2"
+	},
+	{
+		"title": "hola"
+	}
+]
